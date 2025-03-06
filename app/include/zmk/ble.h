@@ -9,6 +9,12 @@
 #include <zmk/keys.h>
 #include <zmk/ble/profile.h>
 
+enum zmk_ble_advertising_type {
+    ZMK_ADV_NONE,
+    ZMK_ADV_DIR,
+    ZMK_ADV_CONN,
+};
+
 #define ZMK_BLE_IS_CENTRAL                                                                         \
     (IS_ENABLED(CONFIG_ZMK_SPLIT) && IS_ENABLED(CONFIG_ZMK_BLE) &&                                 \
      IS_ENABLED(CONFIG_ZMK_SPLIT_ROLE_CENTRAL))
